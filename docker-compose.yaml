@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  vue:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: "find-out-vue"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/app
