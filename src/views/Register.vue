@@ -45,7 +45,7 @@
                       class="form-check-input" 
                       type="checkbox" 
                       id="flexCheckIndeterminate" 
-                      v-model="exibirSenha"
+                      v-model="visibility"
                     />
                     <label 
                       class="form-check-label text-black" 
