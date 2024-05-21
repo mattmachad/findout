@@ -1,18 +1,65 @@
 <template>
     <div>
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="@/assets/images/icon.png" alt="Logo" width="70" height="70">
-                    <router-link class="nav-link me-4 fs-4 text-decoration-none text-info" to="/">FindOut</router-link>
-                </a>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2 fs-5" type="search" placeholder="Onde você deseja ir?"
-                        aria-label="Search" style="min-width: 550px;">
-                    <button class="btn btn-outline-info text-black px-5" type="submit">Ir!</button>
-                </form>
-                <router-link class="nav-link me-4 fs-4 text-decoration-none text-info" to="/about">Sobre</router-link>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="@/assets/images/icon.png" alt="Logo" width="50" height="50" class="me-2">
+            <router-link class="nav-link fs-4 text-decoration-none text-info fw-bold" to="/">FindOut</router-link>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <form class="d-flex mx-auto" role="search">
+              <input class="form-control me-2 fs-5" type="search" placeholder="Onde você deseja ir?" aria-label="Search" style="min-width: 550px;">
+              <button class="btn btn-outline-info text-black px-5" type="submit">Ir!</button>
+            </form>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <router-link class="nav-link fs-5 text-decoration-none text-info" to="/login">Login</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link fs-5 text-decoration-none text-info" to="/register">Registro</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link fs-5 text-decoration-none text-info" to="/about">Sobre</router-link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
-</template>
+  </template>
+  
+  <script>
+  export default {
+    name: "Navbar",
+  };
+  </script>
+  
+  <style>
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .nav-link {
+    margin-right: 1rem;
+  }
+  
+  .navbar-brand img {
+    border-radius: 50%;
+  }
+  
+  .navbar-collapse {
+    justify-content: space-between;
+  }
+  
+  .navbar-toggler {
+    border-color: rgba(0, 123, 255, 0.5);
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 123, 255, 0.5)' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  </style>
+  

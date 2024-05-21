@@ -2,8 +2,8 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-5 mt-5 bg-info rounded-start">
-        <div class="p-2 fw-bold lh-1 text-white text-start mb-3" style="font-size: 4.5em;">
+      <div class="p-5 col-5 mt-3 bg-info rounded-start">
+        <div class="fw-bold lh-1 text-white text-start mb-3" style="font-size: 4.5em;">
           Descubra lugares sem sair de casa...
         </div>
         <h2 class="mb-2 text-white">De onde?</h2>
@@ -11,24 +11,26 @@
             <input 
               type="text" 
               class="form-control p-2" 
-              aria-label="Sizing example input" 
+              arial-label=""
               aria-describedby="inputGroup-sizing-sm"
             >
+            <button class="input-group-text" id="basic-addon2"><i class="bi bi-pin"></i></button>
         </div>
         <h2 class="mb-2 text-white">Para onde?</h2>
         <div class="input-group input-group-sm mb-3">
           <input 
             type="text" 
             class="form-control p-2" 
-            aria-label="Sizing example input" 
+            arial-label=""
             aria-describedby="inputGroup-sizing-sm"
-          >
-        </div>
+            >
+            <button class="input-group-text" id="basic-addon2"><i class="bi bi-pin"></i></button>
+          </div>
         <button type="button" class="btn btn-light mb-3 text-dark" style="font-size: 1.5em;">
           Buscar <i class="bi bi-search ms-1"></i>
         </button>
       </div>
-      <div class="col-7 mt-5 bg-white rounded-end">
+      <div class="col-7 mt-3 bg-white rounded-end">
         <iframe 
           class="mt-3 rounded" 
           width="100%" 
