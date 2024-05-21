@@ -16,26 +16,44 @@
             </form>
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <router-link class="nav-link fs-5 text-decoration-none text-info" to="/login">Login</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link fs-5 text-decoration-none text-info" to="/register">Registro</router-link>
-              </li>
-              <li class="nav-item">
                 <router-link class="nav-link fs-5 text-decoration-none text-info" to="/about">Sobre</router-link>
               </li>
+              <li class="nav-item" v-if="currentPath !== 'login' && !logged">
+                <router-link class="nav-link fs-5 text-decoration-none text-info" to="/login">Login</router-link>
+              </li>
+              <li class="nav-item" v-if="currentPath === 'login' && !logged">
+                <router-link class="nav-link fs-5 text-decoration-none text-info" to="/register">Registro</router-link>
+              </li>
+              <li class="nav-item" v-if="logged" @click="logout()">
+                <router-link class="nav-link fs-5 text-decoration-none text-info" to="/login">Logout</router-link>
+              </li>              
             </ul>
+            
           </div>
         </div>
       </nav>
     </div>
-  </template>
+</template>
   
-  <script>
+<script>
   export default {
     name: "Navbar",
+    computed: {
+      currentPath() {
+        return this.$route.path.substring(1);
+      },
+      logged() {
+        return localStorage.getItem('logged') ===  'true' ? true : false
+      }
+    },
+    methods: {
+      logout() {
+        localStorage.setItem('logged', false)
+        this.$router.push('/login');
+      }
+    }
   };
-  </script>
+</script>
   
   <style>
   .navbar {

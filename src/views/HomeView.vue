@@ -1,5 +1,8 @@
 
 <template>
+<div>
+
+
   <div class="container">
     <div class="row">
       <div class="p-5 col-5 mt-3 bg-info rounded-start">
@@ -43,6 +46,7 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -50,10 +54,7 @@
 export default {
   data: () => ({
     unimarLink: "https://www.google.com/maps/embed/v1/place?key=AIzaSyDGgUsC1HWikfjFda0Bz70GPo25YZ_9MuE&q=Unimar,Marilia",
-  }),
-  methods: {
-    
-  },
+  })
 
 }
 </script>

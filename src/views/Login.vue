@@ -8,7 +8,8 @@
           </div>
           <h2 class="mb-2 text-white">Usuário</h2>
           <div class="input-group input-group-sm mb-3">
-            <input 
+            <input
+              v-model="username"
               type="text" 
               class="form-control p-2" 
               arial-label=""
@@ -18,6 +19,7 @@
           <h2 class="mb-2 text-white">Senha</h2>
           <div class="input-group input-group-sm mb-3">
             <input 
+              v-model="password"
               :type="visibility ? 'text' : 'password'" 
               class="form-control p-2" 
               id="password" 
@@ -32,7 +34,7 @@
             <div class="form-check">
                 <span class="text-white">Não possui um login? <a class="text-black" href="/register">Registre-se</a></span>
               </div>
-            <button type="button" class="btn btn-light text-dark" style="font-size: 1.5em;">
+            <button @click="login()" type="button" class="btn btn-light text-dark" style="font-size: 1.5em;">
               Entrar
             </button>
            
@@ -42,22 +44,65 @@
           <img src="../assets/images/loginAndRegister/login.webp" alt="" class="img-fluid" style="max-width: 80%;">
         </div>
       </div>
+
+      <div :class="'alert alert-' + alertInfo.color" style="position: fixed; bottom: 1em; right: 1em;" role="alert" v-if="alertActivate">
+        {{alertInfo.text}}
+      </div>
     </div>
-  </template>
+</template>
   
-  <script>
+<script>
   export default {
     data: () => ({
-        visibility: false 
+        visibility: false ,
+        username: '',
+        password: '',
+        alertActivate: false,
+        alertInfo: {
+          color: 'danger',
+          text: ''
+        },
     }),
     methods: {
         changeVisibility() {
             this.visibility = !this.visibility
+        },
+        login() {
+          const allUsers = JSON.parse(localStorage.getItem('allUsers'));
+
+          const userExists = allUsers.some(user => user.username === this.username && user.password === this.password);
+
+          if (userExists) {
+            localStorage.setItem('logged', true)
+            this.alertInfo.color = 'success';
+            this.alertInfo.text = 'Logado com sucesso';
+            this.alertActivate = true
+            
+
+            setTimeout(() => {
+              this.$router.push('/');
+            }, 1000);
+          }
+          else {
+            this.alertInfo.color = 'danger';
+            this.alertInfo.text  = 'Usuário ou senha incorretos';
+            this.alertActivate   = true
+          }
+        },
+    },
+    watch: {
+      alertActivate(val) {
+        if(val) {
+          setTimeout(() => {
+            this.alertActivate = false
+          }, 5000);
         }
+      }
     },
   };
-  </script>
+</script>
   
-  <style>
-  </style>
+<style>
+  
+</style>
   
