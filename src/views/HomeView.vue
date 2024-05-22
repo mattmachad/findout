@@ -1,8 +1,6 @@
 
 <template>
 <div>
-
-
   <div class="container">
     <div class="row">
       <div class="p-5 col-5 mt-3 bg-info rounded-start">
@@ -34,15 +32,7 @@
         </button>
       </div>
       <div class="col-7 mt-3 bg-white rounded-end">
-        <iframe 
-          class="mt-3 rounded" 
-          width="100%" 
-          height="94%" 
-          style="border: 15px;" 
-          loading="lazy"
-          allowfullscreen referrerpolicy="no-referrer-when-downgrade" 
-          :src="unimarLink">
-        </iframe>
+        <HereMap/>
       </div>
     </div>
   </div>
@@ -50,14 +40,24 @@
 </template>
 
 <script>
+import HereMap from '../components/newMap.vue'
 
 export default {
-  data: () => ({
-    unimarLink: "https://www.google.com/maps/embed/v1/place?key=AIzaSyDGgUsC1HWikfjFda0Bz70GPo25YZ_9MuE&q=Unimar,Marilia",
-  })
-
+  name: 'app',
+  components: {
+    HereMap
+  },
+  data() {
+    return {
+      center: {
+        lat: -14.2000,
+        lng: -51.9253
+      }
+    }
+  }
 }
 </script>
+
 
 <style scoped>
 
