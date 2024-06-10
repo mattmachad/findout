@@ -15,7 +15,7 @@
               aria-describedby="inputGroup-sizing-sm"
               v-model="startLocation"  
             >
-            <button class="input-group-text" id="basic-addon1" @click="insertUnimarAddress"><i class="bi bi-pin"></i></button>
+            <button class="input-group-text" id="basic-addon2"><i class="bi bi-pin"></i></button>
           </div>
           <h2 class="mb-2 text-white">Para onde?</h2>
           <div class="input-group input-group-sm mb-3">
@@ -25,7 +25,9 @@
               aria-label=""
               aria-describedby="inputGroup-sizing-sm"
               v-model="endLocation" 
-            >          </div>
+            >
+            <button class="input-group-text" id="basic-addon2"><i class="bi bi-pin"></i></button>
+          </div>
           <button type="button" class="btn btn-light mb-3 text-dark" style="font-size: 1.5em;" @click="searchRoute">
             Buscar <i class="bi bi-search ms-1"></i>
           </button>
@@ -34,7 +36,8 @@
           <HereMap ref="hereMap" 
           :key="mapKey" 
           :start="startCoordinates" 
-          :end="endCoordinates"          
+          :end="endCoordinates"
+          
           />
         </div>
       </div>
@@ -70,7 +73,10 @@ export default {
         alert('Por favor, insira ambos os locais de partida e destino.');
         return;
       }
-
+      
+      console.log('antes')
+      console.log( this.startCoordinates)
+      console.log(this.endCoordinates)
       try {
         const startCoords = await this.getCoordinates(this.startLocation);
         const endCoords = await this.getCoordinates(this.endLocation);
@@ -117,11 +123,7 @@ export default {
     },
     async calculateRoute(startCoords, endCoords) {
       return [startCoords, endCoords];
-    },
-
-    async insertUnimarAddress() {
-    this.startLocation = 'Unimar Marília';
-  },
+    }
     
   }
 };
