@@ -1,7 +1,7 @@
 <template>
   <div class="container d-flex justify-content-center align-items-center my-3">
     <div class="row w-100">
-      <div class="p-5 col-md-5 bg-info rounded-start">
+      <div class="p-5 col-md-5 bg-danger rounded-start">
         <div class="fw-bold lh-1 text-white text-start mb-3" style="font-size: 4.5em;">
           Registre-se
           <hr class="border border-white border-3 bg-white">

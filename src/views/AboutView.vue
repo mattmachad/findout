@@ -6,7 +6,7 @@
     <div class="row mt-5">
 
       <div class="col-auto" :key="index" v-for="(member, index) in members">
-        <div class="card text-bg-info" style="width: 18rem;">
+        <div class="card text-bg-danger" style="width: 18rem;">
           <img :src="member.image" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ member.name }}</h5>

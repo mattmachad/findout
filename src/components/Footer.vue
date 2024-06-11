@@ -11,7 +11,7 @@
         </div>
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
             © {{ currentYear }} Copyright:
-            <router-link class="text-body" to="/">findout.com.br</router-link>
+            <router-link class="text-body" to="/">fulltime.com.br</router-link>
         </div>
     </footer>
 </template>
