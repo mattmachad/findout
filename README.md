@@ -2,7 +2,7 @@
 
 O projeto Fulltime oferece uma solução inovadora para calcular rotas e endereços através de um website intuitivo e fácil de usar. Com o Fulltime, você pode facilmente planejar o seu trajeto, conhecer distâncias e descobrir novas rotas com apenas alguns cliques.
 
-![image](https://github.com/mattmachad/Fulltime/assets/126185494/4233b8e3-2db3-41a7-832b-ffd656be6be4)
+![image](https://github.com/mattmachad/findout/assets/126185494/4233b8e3-2db3-41a7-832b-ffd656be6be4)
 
 
 A tela principal do site permite adicionar facilmente um endereço de partida e um destino, tornando a sua experiência de navegação mais eficiente e personalizada.
@@ -11,7 +11,7 @@ A tela principal do site permite adicionar facilmente um endereço de partida e 
 
 A barra de navegação do Fulltime é projetada para oferecer acesso rápido às principais funcionalidades do site:
 
-![image](https://github.com/mattmachad/Fulltime/assets/126185494/1c848015-5f14-4e25-b7b3-4c2a4198a460)
+![image](https://github.com/mattmachad/findout/assets/126185494/1c848015-5f14-4e25-b7b3-4c2a4198a460)
 
 
 ### Funcionalidades da Navbar:
@@ -24,7 +24,7 @@ A barra de navegação do Fulltime é projetada para oferecer acesso rápido às
 
 A tela principal é onde a mágica acontece. Aqui, você pode definir sua rota com facilidade, graças aos campos intuitivos e ao mapa interativo.
 
-![image](https://github.com/mattmachad/Fulltime/assets/126185494/45774fde-17b8-4292-ab8a-701595b3c126)
+![image](https://github.com/mattmachad/findout/assets/126185494/45774fde-17b8-4292-ab8a-701595b3c126)
 
 
 ### Campos da Tela Principal:
@@ -38,7 +38,7 @@ A tela principal é onde a mágica acontece. Aqui, você pode definir sua rota c
 
 A tela "Sobre" do Fulltime é um espaço dedicado a apresentar os criadores e colaboradores do projeto, permitindo aos usuários conhecer melhor quem está por trás da inovação.
 
-![image](https://github.com/mattmachad/Fulltime/assets/126185494/fe45de20-ef05-4481-8269-7644c0ad3321)
+![image](https://github.com/mattmachad/findout/assets/126185494/fe45de20-ef05-4481-8269-7644c0ad3321)
 
 
 Nesta seção, fotos dos participantes são acompanhadas por breves descrições de suas contribuições, celebrando o trabalho em equipe e a colaboração.
@@ -47,7 +47,7 @@ Nesta seção, fotos dos participantes são acompanhadas por breves descrições
 
 A tela "Login" basicamente permite o usuário fazer login pa plataforma.
 
-![image](https://github.com/mattmachad/Fulltime/assets/126185494/5762d188-25ae-4ec9-81ea-572f240a0fb5)
+![image](https://github.com/mattmachad/findout/assets/126185494/5762d188-25ae-4ec9-81ea-572f240a0fb5)
 
 
 ### Campos da Tela de Login:
@@ -61,7 +61,7 @@ A tela "Login" basicamente permite o usuário fazer login pa plataforma.
 
 A tela "Registra-se" permite um usuário novo se cadastrar.
 
-![image](https://github.com/mattmachad/Fulltime/assets/126185494/41b30357-3ad7-4bb2-9804-9d0c3fab06ce)
+![image](https://github.com/mattmachad/findout/assets/126185494/41b30357-3ad7-4bb2-9804-9d0c3fab06ce)
 
 
 ### Campos da Tela de Registro:
